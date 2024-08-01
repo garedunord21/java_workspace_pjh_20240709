@@ -1,0 +1,30 @@
+package chapter2;
+
+// 인터페이스 : 클래스가 구현해야하는 메서드들을 선언한 참조 타입
+// 인터페이스의 모든 변수 public static final 형태가 와야함
+// 인터페이스의 모든 메서드는 public abstract 형태가 와야함
+// 인터페이스는 다중 구현이 가능
+
+// 접근제어자 interface 인터페이스행 { ... }
+interface AreaCalculation {
+	
+	double PI = 3.14;
+	
+	double getTriangleArea(double bottom, double height);
+	double getRectangleArea(double bottom, double height);
+	double getCircleArea(double radius);
+	
+}
+
+class MyCalculation 
+
+public class Interface {
+
+	public static void main(String[] args) {
+		
+		double pi = AreaCalculation.PI;
+		AreaCalculation.PI = 10;
+		
+	}
+
+}

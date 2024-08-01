@@ -1,0 +1,179 @@
+package test;
+
+import java.util.Scanner;
+
+interface Vehicle{
+	public void accelerate();
+	public void stop();
+	public void setStart();
+}
+
+class Car{
+	private String vin;
+	private String color;
+	private boolean isStart;
+	
+	public Car(String vin, String color, boolean isStart) {
+		this.vin = vin;
+		this.color = color;
+		this.isStart = isStart;
+	}
+	
+	public String vin() {
+		return this.vin;
+	}
+	
+	public String color() {
+		return this.color;
+	}
+	
+	public boolean isStart() {
+		return this.isStart;
+	}
+}
+
+class Train{
+	private String trainNumber;
+	private String departureStation;
+	private String arrivalStation;
+	private boolean isStart;
+	
+	public Train(String trainNumber, String departureStation, String arrivalStation, boolean isStart) {
+		this.trainNumber = trainNumber;
+		this.departureStation = departureStation;
+		this.arrivalStation = arrivalStation;
+		this.isStart = isStart;
+	}
+	
+	public String trainNumber() {
+		return this.trainNumber;
+	}
+	
+	public String departureStation() {
+		return this.departureStation;
+	}
+	
+	public String arrivalStation() {
+		return this.arrivalStation;
+	}
+	
+	public boolean isStart() {
+		return this.isStart;
+	}
+}
+
+class ManualCar extends Car implements Vehicle{
+	public ManualCar(String vin, String color, boolean isStart) {
+		super(vin, color, isStart);
+	}
+
+	int gear;
+	void setGear() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("기어 단 수 입력(0~6): ");
+		if (gear > 6 || gear < 0) { // 0에서 6이 아닌 정수 입력하면 invalid number 출력
+			System.out.println("invalid number!");
+		}
+		int gear = scanner.nextInt();
+		
+		System.out.println("사용자가 입력한 기어 단 수: " + gear);
+		
+		scanner.close();
+	}
+
+	@Override
+	public void accelerate() {
+		System.out.println("수동 변속기 자동차가 가속합니다!");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("수동 변속기 자동차가 정차합니다!");
+	}
+
+	@Override
+	public void setStart() {
+		
+	}
+}
+
+class AutomaticCar extends Car implements Vehicle{
+	public AutomaticCar(String vin, String color, boolean isStart) {
+		super(vin, color, isStart);
+	}
+	
+	@Override
+	public void accelerate() {
+		System.out.println("자동 변속기 자동차가 가속합니다!");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("자동 변속기 자동차가 정차합니다!");
+	}
+
+	@Override
+	public void setStart() {
+		
+	}
+}
+
+class PassengerTrain extends Train implements Vehicle{
+	public PassengerTrain(String trainNumber, String departureStation, String arrivalStation, boolean isStart) {
+		super(trainNumber, departureStation, arrivalStation, isStart);
+	}
+
+	int passengerCount;
+
+	@Override
+	public void accelerate() {
+		System.out.println("여객 열차가 천천히 가속합니다!");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("여객 열차가 천천히 정차합니다!");
+	}
+
+	@Override
+	public void setStart() {
+		
+	}
+}
+
+class FreightTrain extends Train implements Vehicle{
+	public FreightTrain(String trainNumber, String departureStation, String arrivalStation, boolean isStart) {
+		super(trainNumber, departureStation, arrivalStation, isStart);
+	}
+
+	double cargoWeight;
+
+	@Override
+	public void accelerate() {
+		System.out.println("화물 열차가 느리게 가속합니다!");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("화물 열차가 느리게 정차합니다!");
+	}
+
+	@Override
+	public void setStart() {
+		
+	}
+}
+
+public class Test3 {
+
+	public static void main(String[] args) {
+		
+		Car ManualCar = new ManualCar("10가1234", "blue", false, 0);
+		Car AutomaticCar = new AutomaticCar("10가1234", "blue", false, 0);
+		Train PassengerTrain = new PassengerTrain("KTX001", "서울", "부산", false, 200);
+		Train FreightTrain = new Vehicle("Cargo001", "부산", "구미", true, 100.0);
+		
+	}
+
+}

@@ -1,0 +1,43 @@
+package test;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test1 {
+	
+	public int solution;
+
+	public static int main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("정수 리스트: ");
+		String statement = scanner.nextLine();
+		scanner.close();
+		int[] numList = new int[0];
+		
+		while (true) {
+			System.out.print("정수 리스트: ");
+			int numList = scanner.nextInt();
+			
+			if (numList < 0) return -1;
+			
+			int[] numList = new int[numList.length + 1];
+			
+			for (int index = 0; index < numlist.length; index++) {
+				numList[index] = numList[index];
+			}
+			
+			newNumbers[newNumbers.length - 1] = inputNumber;
+			numbers = newNumbers;
+		}
+		
+		System.out.println(Arrays.toString(numbers));
+		
+		test1 instance = new test1();
+		int numist;
+		
+		instance.solution = 0;
+		
+	}
+
+}

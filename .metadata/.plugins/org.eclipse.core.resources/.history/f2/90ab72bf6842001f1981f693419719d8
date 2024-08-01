@@ -1,0 +1,26 @@
+package chapter2;
+
+// 기타 제어자 (비접근 제어자) : 접근 제어와 무관하게 동작을 제어하는 것
+
+// final 제어자
+// - 클래스 : final 제어자가 붚은 클래스는 확장할 수 없음
+// - 메서드 : final 제어자가 붚은 메서드는 재정의(오버라이드)할 수 없음
+// - 변수 : final 제어자가 붚은 변수는 재할당할 수 없음
+final class FinalClass {
+	int number;
+}
+//class SubFinalClass extends FinalClass {
+//	
+//}
+
+class FinalMethodClass {
+	
+}
+
+public class Modifier {
+
+	public static void main(String[] args) {
+
+	}
+
+}

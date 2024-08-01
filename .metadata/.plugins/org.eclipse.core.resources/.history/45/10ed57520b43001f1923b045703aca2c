@@ -1,0 +1,15 @@
+package chapter2;
+
+// 다형성 : 하나의 표현으로 여러가지 형태를 나타낼 수 있는 것
+
+// 오버로딩 : 같은 클래스 내부에서 동일한 이름의 메서드를 여러 개 정의할 수 있도록 하는 것
+// 오버라이딩 : 자손 클래스에서 조상 클래스에 정의된 메서드를 재정의 하는 것
+
+public class Polymorphism {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

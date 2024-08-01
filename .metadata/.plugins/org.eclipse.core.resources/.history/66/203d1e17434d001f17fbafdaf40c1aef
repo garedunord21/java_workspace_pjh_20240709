@@ -1,0 +1,19 @@
+package test;
+
+import java.util.arrays;
+import java.util.Scanner;
+
+public class test1 {
+	
+	public int solution;
+
+	public static void main(String[] args) {
+		
+		test1 instance = new test1();
+		int numlist;
+		
+		instance.solution = -1;
+		
+	}
+
+}

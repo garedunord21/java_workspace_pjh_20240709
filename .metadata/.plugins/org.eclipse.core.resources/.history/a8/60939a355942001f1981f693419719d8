@@ -1,0 +1,11 @@
+package chapter2_sub;
+
+import chapter2.AccessModifier;
+
+public class AccessModifierSub {
+	
+	void method() {
+		
+	}
+
+}
